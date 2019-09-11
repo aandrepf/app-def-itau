@@ -1,0 +1,135 @@
+@font-face {font-family: itauLt; src: url("./assets/fonts/ItauText_Lt.ttf") format('truetype');}
+@font-face {font-family: itauRg; src: url("./assets/fonts/ItauText_Rg.ttf") format('truetype');}
+@font-face {font-family: itauBd; src: url("./assets/fonts/ItauText_Bd.ttf") format('truetype');}
+@font-face {font-family: itauXBd; src: url("./assets/fonts/ItauText_XBd.ttf") format('truetype');}
+@font-face {font-family: itauFonts; src: url("./assets/fonts/itaufonts_master_24px_v1.ttf") format('truetype');}
+html, body{
+  height: 100%;
+  background-color: #efe9e5!important;
+  text-align: center;
+  overflow:hidden;
+}
+.container {
+  max-width: 100%!important;
+  height: 100%;
+}
+.h-93 {
+  border: 1px dotted red;
+  height: 93%!important;
+}
+.card {
+  border: 0px dotted #fff!important;
+  background-color: transparent!important;
+  margin: 0 auto 0px;
+  top: 0;
+  position:relative;
+}
+.row {
+  margin-right: 0!important;
+  margin-left: 0!important;
+}
+
+/* NAVIGATION */
+.col-sm-12.col-navigate {
+  margin: 59px 0 0;
+  padding: 0 40px 0;
+}
+span.back-icon {
+  font-family: itauFonts, Arial, Helvetica, sans-serif;
+  font-size: 89px;
+  line-height: 39px;
+  color: #4A4A4A;
+}
+span.back-text {
+  font-family: itauRG, Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 39px;
+  margin: 0 35px 0;
+  position: relative;
+  top: -14px;
+  color: #4A4A4A;
+}
+
+/* IDENTIFICACAO */
+.col-sm-12.col-title {
+  text-align: center;
+}
+p.identificacao-title {
+  font-family: itauLt;
+  margin: -93px 0 0;
+  font-size: 120px;
+  letter-spacing: 0;
+}
+input, input::-webkit-input-placeholder, .form-control:focus, input:focus {
+  font-family: itauLt, Arial, Helvetica, sans-serif;
+  border: none!important;
+  border-bottom: 4px solid #f36d00!important;
+  padding: 0;
+  outline: none!important;
+  box-shadow: none!important;
+  margin: 0px auto 238px!important;
+  background: transparent;
+  color: #4A4A4A!important;
+  font-size: 140px!important;
+  text-align: center;
+  border-radius: 0px;
+  width: 1020px!important;
+  height: 208px!important;
+  vertical-align: baseline;
+}
+.form-control:disabled, .form-control {
+  background-color: transparent!important;
+}
+
+/* NUMPAD */
+.numpad {
+  background-color: #fff;
+  padding: 32px 0 0;
+  width: 1295px!important;
+  position: relative;
+  margin: 0 auto 0;
+  bottom: -110px;
+  z-index: 10;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+.col-sm-12.number-pad {
+  padding: 0px 50px 0;
+}
+.col-sm-4.btn-pad {
+  height: 256px;
+}
+.col-sm-4.btn-pad:hover {
+  background-color: #f1f1f1;
+  text-decoration: underline;
+}
+.btn-pad p {
+  font-family: itauRg, Arial, Helvetica, sans-serif;
+  color: #4a4a4a;
+  font-weight: 700;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 42px;
+  position: relative;
+  top: 37%;
+}
+img {
+  width: 92px;
+  position: relative;
+  top: -25px;
+}
+button.btn-brand-continue {
+  font-family: itauBd,Arial, Helvetica, sans-serif;
+  min-width: 1010px;
+  box-shadow: none!important;
+  outline: none!important;
+  padding: 55px 0;
+  display: block;
+  margin: 115px auto 0;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  background-color: #f36d00!important;
+  border-color: #f36d00!important;
+}

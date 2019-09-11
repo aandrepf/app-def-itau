@@ -1,0 +1,19 @@
+<div class="card card-block w-100 mx-auto">
+  <div class="row">
+    <div class="col-sm-12 col-title">
+      <p class="identificacao-title">insira<br>seu CPF</p>
+    </div>
+    <div class="col-sm-12 col-conteudo">
+      <form class="example-form">
+        <input
+        value="{{ valorPad }}"
+        type="text" maxlength="14" placeholder="cpf" class="form-control identificacao-input"
+        (keydown)="onKey($event)"
+        (focus)="toggleShowDiv('divA')">
+      </form>
+      <div class="col-sm-12 numpad divA" [@slideInOut]="animationState">
+        <numpad (numValue)="recebeValue($event)"></numpad>
+      </div>
+    </div>
+  </div>
+</div>

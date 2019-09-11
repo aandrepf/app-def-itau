@@ -1,0 +1,62 @@
+{
+  "name": "app-def-itau",
+  "version": "1.0.0",
+  "description": "Aplicação para DEMANDA FOLHA do Itaú",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aandrepf/app-def-itau.git"
+  },
+  "author": "André Philippe Figueiredo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aandrepf/app-def-itau/issues"
+  },
+  "homepage": "https://github.com/aandrepf/app-def-itau#readme",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "test": "ng test",
+    "start": "ng serve"
+  },
+  "dependencies": {
+    "@angular/animations": "^6.1.10",
+    "@angular/cdk": "^7.3.0",
+    "@angular/common": "^6.0.3",
+    "@angular/compiler": "^6.0.3",
+    "@angular/core": "^6.0.3",
+    "@angular/forms": "^6.0.3",
+    "@angular/http": "^6.0.3",
+    "@angular/material": "^7.3.0",
+    "@angular/platform-browser": "^6.0.3",
+    "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/router": "^6.0.3",
+    "bootstrap": "^4.1.2",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "ngx-mask": "^7.4.0",
+    "ngx-spinner": "^6.1.2",
+    "popper.js": "^1.14.3",
+    "rxjs": "^6.0.0",
+    "tether": "^1.4.5",
+    "web-animations-js": "^2.3.1",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.6.8",
+    "@angular/cli": "~6.0.8",
+    "@angular/compiler-cli": "^6.0.3",
+    "@angular/language-service": "^6.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.2.1",
+    "conventional-changelog-cli": "2.0.11",
+    "npm-run-all": "4.1.5",
+    "protractor": "~5.3.0",
+    "ts-node": "~5.0.1",
+    "tslint": "~5.9.1",
+    "typescript": "^2.8.4",
+    "wait-on": "3.2.0",
+    "webdriver-manager": "12.1.0"
+  }
+}
