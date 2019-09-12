@@ -8,6 +8,7 @@ import { NgxMaskModule, MaskService } from 'ngx-mask';
 
 import { IdentificacaoComponent } from './identificacao.component';
 import { NumPadComponent } from './numpad/numpad';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { NumPadComponent } from './numpad/numpad';
     ReactiveFormsModule,
     MatInputModule,
     MatBottomSheetModule,
-    NgxMaskModule
+    NgxMaskModule,
+    NgxSpinnerModule
   ],
   declarations: [
     IdentificacaoComponent,

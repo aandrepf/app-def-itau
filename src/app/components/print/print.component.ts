@@ -16,7 +16,7 @@ import { AppComponent } from './../../app.component';
           }else {
             this._app.previousRoute = this._state.getHistory();
             console.log('Fluxo depois selecionado segmento', Global.FLUXO);
-            // this._app.showNavigationButton();
+            this._app.getLocation();
           }
       }
   }

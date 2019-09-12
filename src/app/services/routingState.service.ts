@@ -10,6 +10,7 @@ export class RoutingState {
   public loadRouting(): void {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
     .subscribe(({urlAfterRedirects}: NavigationEnd) => {
+      sessionStorage.setItem('location', urlAfterRedirects);
       this.history = [...this.history, urlAfterRedirects];
     });
   }

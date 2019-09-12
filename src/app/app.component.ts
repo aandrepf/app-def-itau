@@ -14,7 +14,7 @@ export class AppComponent {
     this.previousRoute = this._state.getHistory();
     this._state.loadRouting();
     console.log('versão', '1.0.0');
-    this.showNavigationButton();
+    this.showNavigationButton(sessionStorage.getItem('location'));
   }
 
   public previousPage() {
@@ -25,12 +25,17 @@ export class AppComponent {
     }
   }
 
-  public showNavigationButton() {
-    this.previousRoute = this._state.getHistory();
-    if(this.previousRoute.length >= 1) {
-      this.showNavigation = true;
-    } else {
+  public getLocation() {
+    setTimeout(()=>{
+      this.showNavigationButton(sessionStorage.getItem('location'));
+    },100)
+  }
+
+  public showNavigationButton(location) {
+    if(location === '/' || location === '/identificacao' || location === '/print') {
       this.showNavigation = false;
+    } else {
+      this.showNavigation = true;
     }
   }
 }

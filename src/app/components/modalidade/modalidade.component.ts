@@ -17,12 +17,12 @@ export class ModalidadeComponent {
     }else {
       this._app.previousRoute = this._state.getHistory();
       console.log('Fluxo depois de recebido o CPF', Global.FLUXO);
-      this._app.showNavigationButton();
+      this._app.getLocation();
     }
   }
 
   public selectModalidade(modalidade: string) {
     console.log('modalidade selecionada:', modalidade);
-    this._router.navigate(['/segmento']);
+    this._router.navigate(['/print']);
   }
 }

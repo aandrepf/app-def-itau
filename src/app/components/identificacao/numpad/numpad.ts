@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Router } from '@angular/router';
 import { Global } from './../../../app.global';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 export class Pad {
   values: string;
@@ -18,7 +19,7 @@ export class NumPadComponent implements OnInit {
 
   public values = '';
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private _spinner: NgxSpinnerService) {}
 
   ngOnInit() { localStorage.clear(); }
 
@@ -47,9 +48,11 @@ export class NumPadComponent implements OnInit {
       padValues.values = dado;
       padValues.animation = 'out';
       this.numValue.emit(padValues);
+      this._spinner.show();
       setTimeout(() => {
-        this.route.navigate(['/modalidade']);
-      }, 500);
+        this._spinner.hide();
+        this.route.navigate(['/segmento']);
+      }, 1000);
 
     }
   }
