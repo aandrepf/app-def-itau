@@ -1,0 +1,175 @@
+{
+  "interfaceEmissorPagina" : [
+    {
+      "Id": 1,
+      "BtnVoltar": false,
+      "Descr": "Pagina Principal",
+      "InterfaceEmissorBotao": [],
+      "InterfaceEmissorLink": [
+        {
+          "Id": 1,
+          "Descr": "Link do Atendimento",
+          "Tipo": "atendimento",
+          "IdEmissorPagina": 1,
+          "PaginaDestino": 2,
+          "TextoLink": "abertura de contas",
+          "PosicaoTexto": 3,
+          "TamanhoFonte": 47,
+          "Negrito": true
+        },
+        {
+          "Id": 2,
+          "Descr": "Link de Cartões",
+          "Tipo": "atendimento",
+          "IdEmissorPagina": 1,
+          "PaginaDestino": 3,
+          "TextoLink": "cartões: pagamentos e serviços",
+          "PosicaoTexto": 3,
+          "TamanhoFonte": 47,
+          "Negrito": true
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "BtnVoltar": false,
+      "Descr": "Pagina Atendimento",
+      "InterfaceEmissorBotao": [
+        {
+          "DescLocalAtendimento": "PRIORITARIO",
+          "HasImage": true,
+          "IconePrioritario": true,
+          "Id": 3,
+          "IdBotao": 3,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "acima de 80 anos",
+          "TipoBotao": 3,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        },
+        {
+          "DescLocalAtendimento": "PRIORITARIO",
+          "HasImage": true,
+          "IconePrioritario": true,
+          "Id": 2,
+          "IdBotao": 2,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "prioritário",
+          "TipoBotao": 3,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        },
+        {
+          "DescLocalAtendimento": "ATENDIMENTO",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 1,
+          "IdBotao": 1,
+          "IdEmissorPagina": 2,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "geral",
+          "TipoBotao": 1,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        }
+      ],
+      "InterfaceEmissorLink": []
+    },
+    {
+      "Id": 3,
+      "BtnVoltar": false,
+      "Descr": "Pagina Cartões Produtos e Serviços",
+      "InterfaceEmissorBotao": [
+        {
+          "DescLocalAtendimento": "GERENCIA",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 7,
+          "IdBotao": 7,
+          "IdEmissorPagina": 3,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "Uniclass/Personalité",
+          "TipoBotao": 2,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        }
+      ],
+      "InterfaceEmissorLink": [
+        {
+          "Id": 1,
+          "Descr": "Link do Cliente Itaú",
+          "Tipo": "atendimento",
+          "IdEmissorPagina": 3,
+          "PaginaDestino": 5,
+          "TextoLink": "cliente Itaú",
+          "PosicaoTexto": 3,
+          "TamanhoFonte": 47,
+          "Negrito": true
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "BtnVoltar": false,
+      "Descr": "Pagina Cartões - Cliente Itaú",
+      "InterfaceEmissorBotao": [
+        {
+          "DescLocalAtendimento": "PRIORITARIO",
+          "HasImage": true,
+          "IconePrioritario": true,
+          "Id": 6,
+          "IdBotao": 6,
+          "IdEmissorPagina": 5,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "acima de 80 anos",
+          "TipoBotao": 3,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        },
+        {
+          "DescLocalAtendimento": "PRIORITARIO",
+          "HasImage": true,
+          "IconePrioritario": true,
+          "Id": 5,
+          "IdBotao": 5,
+          "IdEmissorPagina": 5,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "prioritário",
+          "TipoBotao": 3,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        },
+        {
+          "DescLocalAtendimento": "ATENDIMENTO",
+          "HasImage": true,
+          "IconePrioritario": false,
+          "Id": 4,
+          "IdBotao": 4,
+          "IdEmissorPagina": 5,
+          "IdLocalAtendimento": 1,
+          "NomeImage": "",
+          "TamanhoBotao": 20,
+          "TextoBotao": "geral",
+          "TipoBotao": 1,
+          "Negrito": true,
+          "PosicaoTexto": 3
+        }
+      ],
+      "InterfaceEmissorLink": []
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+	"interfaceEmissorPagina": [{
+		"id": 1,
+		"descr": "Página Inicial",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [{
+			"id": 1,
+			"idEmissorPagina": 1,
+			"textoPagina": "Página principal",
+			"tamanhoFonte": 14,
+			"negrito": false,
+			"posicaoTexto": 2
+		}],
+		"interfaceEmissorLink": [{
+			"id": 1,
+			"idEmissorPagina": 1,
+			"descr": "Link Atendimento",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 14,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 2,
+			"interfaceEmissorTituloLink": [{
+				"id": 1,
+				"idEmissorPagina": 1,
+				"idLink": 1,
+				"textoLink": "abertura de contas",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}, {
+			"id": 11,
+			"idEmissorPagina": 1,
+			"descr": "LINK CARTOES",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 47,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 4,
+			"interfaceEmissorTituloLink": [{
+				"id": 16,
+				"idEmissorPagina": 1,
+				"idLink": 11,
+				"textoLink": "cartões",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}],
+		"interfaceEmissorTituloLink": [{
+			"id": 16,
+			"idEmissorPagina": 1,
+			"idLink": 11,
+			"textoLink": "cartões",
+			"tamanhoFonte": 47,
+			"negrito": true,
+			"posicaoTexto": 3
+		}],
+		"interfaceEmissorBotao": []
+	}, {
+		"id": 2,
+		"descr": "Página Atendimento",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [{
+			"id": 2,
+			"idEmissorPagina": 2,
+			"textoPagina": "Abertura de Contas",
+			"tamanhoFonte": 14,
+			"negrito": false,
+			"posicaoTexto": 2
+		}],
+		"interfaceEmissorLink": [],
+		"interfaceEmissorTituloLink": [],
+		"interfaceEmissorBotao": [{
+			"id": 9,
+			"idEmissorPagina": 2,
+			"idBotao": 3,
+			"textoBotao": "prioritário 80+",
+			"tipoBotao": 3,
+			"tamanhoBotao": 47,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}, {
+			"id": 10,
+			"idEmissorPagina": 2,
+			"idBotao": 2,
+			"textoBotao": "prioritário",
+			"tipoBotao": 3,
+			"tamanhoBotao": 47,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}, {
+			"id": 11,
+			"idEmissorPagina": 2,
+			"idBotao": 1,
+			"textoBotao": "geral",
+			"tipoBotao": 3,
+			"tamanhoBotao": 47,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}]
+	}, {
+		"id": 3,
+		"descr": "Página Cartões Produtos e Serviços",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [{
+			"id": 3,
+			"idEmissorPagina": 3,
+			"textoPagina": "Cartões: pagamentos e serviços",
+			"tamanhoFonte": 14,
+			"negrito": false,
+			"posicaoTexto": 2
+		}],
+		"interfaceEmissorLink": [{
+			"id": 3,
+			"idEmissorPagina": 3,
+			"descr": "Link do Cartões - Cliente Itau",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 14,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 5,
+			"interfaceEmissorTituloLink": [{
+				"id": 5,
+				"idEmissorPagina": 3,
+				"idLink": 3,
+				"textoLink": "cliente Itaú",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}],
+		"interfaceEmissorTituloLink": [{
+			"id": 5,
+			"idEmissorPagina": 3,
+			"idLink": 3,
+			"textoLink": "cliente Itaú",
+			"tamanhoFonte": 47,
+			"negrito": true,
+			"posicaoTexto": 3
+		}],
+		"interfaceEmissorBotao": [{
+			"id": 8,
+			"idEmissorPagina": 3,
+			"idBotao": 7,
+			"textoBotao": "Uniclass/Personalité",
+			"tipoBotao": 3,
+			"tamanhoBotao": 47,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}]
+	}, {
+		"id": 4,
+		"descr": "Pagina Outros Produtos e Serviços",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [],
+		"interfaceEmissorLink": [{
+			"id": 8,
+			"idEmissorPagina": 4,
+			"descr": "Link Outros - Cliente Itaú",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 20,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 6,
+			"interfaceEmissorTituloLink": [{
+				"id": 13,
+				"idEmissorPagina": 4,
+				"idLink": 8,
+				"textoLink": "cliente Itaú",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}, {
+			"id": 9,
+			"idEmissorPagina": 4,
+			"descr": "Link Outros - Uniclass/Personalité",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 20,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 7,
+			"interfaceEmissorTituloLink": [{
+				"id": 14,
+				"idEmissorPagina": 4,
+				"idLink": 9,
+				"textoLink": "Uniclass/Personalité",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}, {
+			"id": 10,
+			"idEmissorPagina": 4,
+			"descr": "Link Outros - Empresas",
+			"tipoBotao": 2,
+			"tamanhoBotaolink": 20,
+			"iconePrioritario": false,
+			"idEmissorPaginasDestino": 4,
+			"interfaceEmissorTituloLink": [{
+				"id": 15,
+				"idEmissorPagina": 4,
+				"idLink": 10,
+				"textoLink": "empresas",
+				"tamanhoFonte": 47,
+				"negrito": true,
+				"posicaoTexto": 3
+			}]
+		}],
+		"interfaceEmissorTituloLink": [{
+			"id": 15,
+			"idEmissorPagina": 4,
+			"idLink": 10,
+			"textoLink": "empresas",
+			"tamanhoFonte": 47,
+			"negrito": true,
+			"posicaoTexto": 3
+		}],
+		"interfaceEmissorBotao": []
+	}, {
+		"id": 5,
+		"descr": "Página Inicial",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [],
+		"interfaceEmissorLink": [],
+		"interfaceEmissorTituloLink": [],
+		"interfaceEmissorBotao": [{
+			"id": 12,
+			"idEmissorPagina": 5,
+			"idBotao": 6,
+			"textoBotao": "prioritário 80+",
+			"tipoBotao": 3,
+			"tamanhoBotao": 14,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}, {
+			"id": 13,
+			"idEmissorPagina": 5,
+			"idBotao": 5,
+			"textoBotao": "prioritário",
+			"tipoBotao": 3,
+			"tamanhoBotao": 14,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}, {
+			"id": 14,
+			"idEmissorPagina": 5,
+			"idBotao": 4,
+			"textoBotao": "geral",
+			"tipoBotao": 3,
+			"tamanhoBotao": 14,
+			"iconePrioritario": true,
+			"idLocalAtendimento": 2,
+			"descLocalAtendimento": "GERÊNCIA",
+			"hasImage": false,
+			"nomeImage": ""
+		}]
+	}, {
+		"id": 6,
+		"descr": "Página Atendimento",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [],
+		"interfaceEmissorLink": [],
+		"interfaceEmissorTituloLink": [],
+		"interfaceEmissorBotao": []
+	}, {
+		"id": 7,
+		"descr": "Página Cartões Produtos e Serviços",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [],
+		"interfaceEmissorLink": [],
+		"interfaceEmissorTituloLink": [],
+		"interfaceEmissorBotao": []
+	}, {
+		"id": 8,
+		"descr": "Pagina Cartões - Cliente Itaú",
+		"iconePrioritario": false,
+		"btnVoltar": true,
+		"msgExtra": "<div style=width:250px>\n<span style=font-size:14pt>\nTempo de espera:\n</br></br></span><span style=font-size:12pt>\nAté 20 minutos<br></span>\n<span style=font-size:10pt>(Dias normais)<br>\n</span><span style=font-size:12pt>\nAté 30 minutos\n<span style=font-size:10pt>\n(Vésperas e</br>\napós feriados prolongados)</br>\n</span></span></br>\n<span style=font-size:13pt>\nPROCON </br></span>\n</div>",
+		"interfaceEmissorTituloPagina": [],
+		"interfaceEmissorLink": [],
+		"interfaceEmissorTituloLink": [],
+		"interfaceEmissorBotao": []
+	}],
+	"retcode": 0,
+	"retmsg": ""
+}
