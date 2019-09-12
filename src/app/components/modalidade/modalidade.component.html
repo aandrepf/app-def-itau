@@ -1,8 +1,57 @@
 <div class="card card-block w-100 mx-auto">
   <div class="row">
-    <div class="col-sm-12 col-title">
-      <p class="identificacao-title">escolha uma<br>das opções</p>
+    <div class="col-sm-12 col-title-modalidade">
+      <p class="modalidade-title">escolha uma<br>das opções</p>
     </div>
-    <div class="col-sm-12 col-conteudo"></div>
+    <div class="col-sm-12 col-conteudo-modalidade">
+      <div class="row justify-content-center">
+        <div class="align-self-center btn-modalidade" (click)="selectModalidade('80+')">
+          <div class="col-11 inset-modalidade">
+            <div class="col-sm-12 icone">
+              <img class="idoso80" src="./assets/icons/idoso80@2x.svg">
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-texto cat-idoso80">acima de 80 anos</p>
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-subtexto sub-idoso80">&nbsp;</p>
+            </div>
+          </div>  
+          <div class="col-1 inset-borda-modalidade"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="align-self-center btn-modalidade" (click)="selectModalidade('prioritario')">
+          <div class="col-11 inset-modalidade">
+            <div class="col-sm-12 icone">
+              <img class="prioritario" src="./assets/icons/prioritario.png">
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-texto cat-prioritario">prioritário</p>
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-subtexto sub-prioritario">&nbsp;</p>
+            </div>
+          </div> 
+          <div class="col-1 inset-borda-modalidade"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="align-self-center btn-modalidade btn-geral" (click)="selectModalidade('geral')">
+          <div class="col-11 inset-modalidade">
+            <div class="col-sm-12 icone">
+              <img class="geral" src="./assets/icons/geral.png">
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-texto cat-geral">geral</p>
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-subtexto sub-geral">&nbsp;</p>
+            </div>
+          </div>  
+          <div class="col-1 inset-borda-modalidade inset-geral"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -81,6 +81,177 @@ input, input::-webkit-input-placeholder, .form-control:focus, input:focus {
   background-color: transparent!important;
 }
 
+/* MODALIDADE */
+.col-sm-12.col-title-modalidade {
+  text-align: center;
+  display: block;
+  float: left;
+  margin: -300px 0 70px;
+}
+p.modalidade-title {
+  font-family: itauLt;
+  margin: 0;
+  font-size: 118px;
+  line-height: 165px;
+  letter-spacing: 0;
+}
+.col-sm-12.col-conteudo-modalidade {
+  margin: 0px 0 0;
+  display: block;
+  float: left;
+}
+.btn-modalidade {
+  background-color: #fff;
+  text-align: left;
+  width: 865px!important;
+  height: 470px;
+  margin: 78px 0 0 -30px;
+  border-radius: 22px 0px 0px 22px;
+}
+.col-11.inset-modalidade {
+  padding: 112px 0 0 56px;
+  float: left;
+}
+.col-1.inset-borda-modalidade {
+  padding: 0;
+  background: #009CDE;
+  height: 100%;
+  width: 30px;
+  float: right;
+  margin: 0 -28px 0 0;
+  border-radius: 0 22px 22px 0px;
+}
+img.idoso80 {
+  width: 140px;
+}
+img.prioritario {
+  width: 740px;
+  margin: 15px 0 0;
+}
+.texto p.cat-idoso80, .texto p.cat-prioritario, .texto p.cat-geral {
+  font-family: itauLt, Arial, Helvetica, sans-serif;
+  font-size: 84px;
+}
+.btn-geral, .inset-geral {
+  background: #EC7000!important;
+}
+img.geral {
+  width: 80px;
+  margin-top: 15px;
+}
+p.cat-texto.cat-geral {
+  color: #fff;
+}
+
+/* SEGMENTO */
+.btn-segmento {
+  background-color: #fff;
+  text-align: left;
+  width: 865px!important;
+  height: 470px;
+  margin: 78px 0 0 -30px;
+  border-radius: 22px 0px 0px 22px;
+}
+.col-11.inset-segmento {
+  padding: 102px 0 0 76px;
+  float: left;
+}
+.col-1.inset-borda-segmento {
+  padding: 0;
+  background: #EC7000!important;
+  width: 45px;
+  height: 100%;
+  float: right;
+  margin: 0 -32px 0 0;
+  border-radius: 0 22px 22px 0px;
+}
+img.abertura {
+  width: 99px;
+}
+.texto p.cat-abertura, .texto p.cat-informacoes {
+  font-family: itauLt, Arial, Helvetica, sans-serif;
+  font-size: 81px;
+}
+p.cat-subtexto.sub-abertura {
+  font-size: 40px;
+  font-family: itauRg, Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+  margin-top: -20px;
+}
+img.consignado {
+  width: 120px;
+  margin: -8px 0 0;
+}
+p.cat-subtexto.sub-consignado {
+  font-size: 40px;
+  font-family: itauRg, Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+  margin: -17px -20px 0 0;
+}
+.texto p.cat-consignado {
+  font-family: itauLt, Arial, Helvetica, sans-serif;
+  font-size: 74px;
+}
+p.cat-subtexto.sub-informacoes {
+  font-size: 40px;
+  font-family: itauRg, Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+  margin: -30px 0 0;
+}
+
+/* PRINT */
+.col-sm-12.col-conteudo-senha {
+  padding-right: 0;
+  padding-left: 0;
+}
+.row .row-senha {
+  border-radius: 25px;
+  margin: 0 33px!important;
+  background: #ec7000;
+  padding: 0 0 0;
+  height: 1847px;
+}
+.col-sm-12.col-title-senha {
+  text-align: center;
+  display: block;
+  float: left;
+  margin: -20px 0 120px;
+}
+p.senha-title {
+  font-family: itauLt, Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 118px;
+  line-height: 165px;
+  letter-spacing: 0;
+}
+.col-12.inset-senha {
+  margin: -100px 0 0;
+}
+.inset-senha p {
+  color: #fff;
+  text-align: center;
+  font-family: itauRg, Arial, Helvetica, sans-serif;
+}
+p.senha-segmento-texto {
+  font-size: 113px;
+  margin: 0 0 -50px;
+}
+p.senha-modalidade-texto {
+  font-size: 113px;
+  margin: 0 0 0;
+}
+p.senha-range-texto {
+  font-size: 396px;
+  font-family: itauXBd, Arial, Helvetica, sans-serif;
+  margin: 0px 0;
+  line-height: 466px;
+}
+.col-12.inset-setas {
+  bottom: -420px;
+  text-align: center;
+}
+
+
 /* NUMPAD */
 .numpad {
   background-color: #fff;
@@ -113,7 +284,7 @@ input, input::-webkit-input-placeholder, .form-control:focus, input:focus {
   position: relative;
   top: 37%;
 }
-img {
+img.btn-delete {
   width: 92px;
   position: relative;
   top: -25px;

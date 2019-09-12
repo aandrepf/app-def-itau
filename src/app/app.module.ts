@@ -14,6 +14,8 @@ import { AppComponent } from './app.component';
 // modules
 import { IdentificacaoModule } from './components/identificacao/identificacao.module';
 import { ModalidadeModule } from './components/modalidade/modalidade.module';
+import { SegmentoModule } from './components/segmento/segmento.module';
+import { PrintModule } from './components/print/print.module';
 
 // services
 import { RoutingState } from './services/routingState.service';
@@ -28,7 +30,9 @@ import { RoutingState } from './services/routingState.service';
     ReactiveFormsModule,
     HttpClientModule,
     IdentificacaoModule,
-    ModalidadeModule
+    ModalidadeModule,
+    SegmentoModule,
+    PrintModule
   ],
   providers: [
     RoutingState,

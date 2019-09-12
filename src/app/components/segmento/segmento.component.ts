@@ -1,28 +1,28 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router";
 import { Global } from "../../app.global";
 import { RoutingState } from '../../services/routingState.service';
 
-import { AppComponent } from './../../app.component';
+import { AppComponent } from '../../app.component';
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'modalidade',
-  templateUrl: './modalidade.component.html',
+  selector: 'segmento',
+  templateUrl: './segmento.component.html',
 })
-export class ModalidadeComponent {
+export class SegmentoComponent {
 
   constructor(private _app: AppComponent, private _state: RoutingState, private _router: Router) {
     if(Global.FLUXO === null || Global.FLUXO === undefined) {
       this._router.navigate(['/']);
     }else {
       this._app.previousRoute = this._state.getHistory();
-      console.log('Fluxo depois de recebido o CPF', Global.FLUXO);
+      console.log('Fluxo depois de selecionada a modalidade', Global.FLUXO);
       this._app.showNavigationButton();
     }
   }
 
-  public selectModalidade(modalidade: string) {
-    console.log('modalidade selecionada:', modalidade);
-    this._router.navigate(['/segmento']);
+  public selectSegmento(segmento: string) {
+    console.log('segmento selecionado:', segmento);
+    this._router.navigate(['/print']);
   }
 }
