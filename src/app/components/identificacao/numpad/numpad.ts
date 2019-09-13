@@ -3,10 +3,13 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Router } from '@angular/router';
 import { Global } from './../../../app.global';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { InterfaceService } from '../../../services/interface.service';
+import { CRM } from '../../../models/fluxo.model';
 
 export class Pad {
   values: string;
   animation: string;
+  crm: CRM;
 }
 
 @Component({
@@ -19,7 +22,7 @@ export class NumPadComponent implements OnInit {
 
   public values = '';
 
-  constructor(private route: Router, private _spinner: NgxSpinnerService) {}
+  constructor(private route: Router, private _spinner: NgxSpinnerService, private _interface: InterfaceService) {}
 
   ngOnInit() { localStorage.clear(); }
 
@@ -44,16 +47,33 @@ export class NumPadComponent implements OnInit {
       // this.msgErroContinua.emit('Número de telefone inválido!');
 
     } else {
-
+      this._spinner.show();
       padValues.values = dado;
       padValues.animation = 'out';
-      this.numValue.emit(padValues);
-      this._spinner.show();
-      setTimeout(() => {
-        this._spinner.hide();
-        this.route.navigate(['/segmento']);
-      }, 1000);
+      this._interface.getUserInfo(padValues.values).then(
+        (retorno: CRM[]) => {
+          console.log('ret.:', retorno);
+          let cadastro = new CRM();
+          cadastro = retorno[0];
+          padValues.crm = cadastro;
 
+          console.log(padValues);
+          this.numValue.emit(padValues);
+
+          if(padValues.crm) {
+            this._spinner.hide();
+            this.route.navigate(['/segmento']);
+          } else {
+            this._spinner.hide();
+            this.values = '';
+            padValues.values = this.values;
+            padValues.animation = 'out';
+            this.numValue.emit(padValues);
+            this.route.navigate(['/']);
+          }
+          
+        }
+      );
     }
   }
 

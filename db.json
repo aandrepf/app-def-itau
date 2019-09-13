@@ -1,0 +1,9 @@
+{
+    "schema": [
+      { "id": 1, "nome_cliente": "José da Silva", "documento": "11111111111", "situacao": "regular", "segmento": "U", "consignado": true, "correntista": true},
+      { "id": 2, "nome_cliente": "Marcos Antonio", "documento": "22222222222", "situacao": "irregular", "segmento": "U", "consignado": false, "correntista": true},
+      { "id": 3, "nome_cliente": "Julio Cesar", "documento": "33333333333", "situacao": "regular", "segmento": "U", "consignado": false, "correntista": false},
+      { "id": 4, "nome_cliente": "Ronaldo Campos da Silva", "documento": "44444444444", "situacao": "irregular", "segmento": "P", "consignado": false, "correntista": true},
+      { "id": 5, "nome_cliente": "Jose Simao Caponne", "documento": "55555555555", "situacao": "irregular", "segmento": "U", "consignado": true, "correntista": true}
+    ]
+  }

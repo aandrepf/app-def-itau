@@ -4,7 +4,8 @@ export class Fluxo {
     public situacao: string,
     public segmento: string,
     public consignado: boolean,
-    public isPrioritario: boolean
+    public isPrioritario: boolean,
+    public isCorrentista: boolean,
   ) {}
 }
 
@@ -21,4 +22,8 @@ export class CRM {
   idGerente: number;
   prioritario: boolean;
   documento: string;
+  segmento: string;
+  situacao: string;
+  correntista: boolean;
+  consignado: boolean;
 }

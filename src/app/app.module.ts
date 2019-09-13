@@ -19,6 +19,7 @@ import { PrintModule } from './components/print/print.module';
 
 // services
 import { RoutingState } from './services/routingState.service';
+import { InterfaceService } from './services/interface.service';
 
 @NgModule({
   declarations:[AppComponent],
@@ -36,6 +37,7 @@ import { RoutingState } from './services/routingState.service';
   ],
   providers: [
     RoutingState,
+    InterfaceService,
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
