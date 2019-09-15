@@ -1,14 +1,15 @@
 export class Fluxo {
   constructor(
     public crm: CRM,
+    public opcao: string,
     public situacao: string,
     public segmento: string,
-    public consignado: boolean,
+    public consignado: string,
+    public crmEncontrado: boolean,
     public isPrioritario: boolean,
-    public isCorrentista: boolean,
+    public correntista: boolean,
   ) {}
 }
-
 export class CRM {
   ag: string;
   cnpj: string;
@@ -25,5 +26,7 @@ export class CRM {
   segmento: string;
   situacao: string;
   correntista: boolean;
-  consignado: boolean;
+  consignado: string;
+  status: boolean;
+  error: string;
 }

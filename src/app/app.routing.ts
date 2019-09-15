@@ -8,9 +8,9 @@ import { PrintComponent } from './components/print/print.component';
 
 const routes: Routes = [
   { path: 'identificacao', component: IdentificacaoComponent},
-  { path: 'modalidade', component: ModalidadeComponent},
+  { path: 'modalidade/:id', component: ModalidadeComponent},
   { path: 'segmento', component: SegmentoComponent},
-  { path: 'print', component: PrintComponent},
+  { path: 'print/:id', component: PrintComponent},
   { path: '', redirectTo: 'identificacao', pathMatch: 'full' },
   { path: '**', redirectTo: 'identificacao' }
 ]

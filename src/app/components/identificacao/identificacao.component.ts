@@ -1,9 +1,18 @@
+import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
+import { ValidateBrService } from 'angular-validate-br';
 import { SlideInOutAnimation } from './animation';
 import { Pad } from './numpad/numpad';
 import { Global } from './../../app.global';
 import { RoutingState } from '../../services/routingState.service';
 import { Fluxo, CRM } from '../../models/fluxo.model';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserIdleService } from 'angular-user-idle';
+
+class Status {
+  status: boolean;
+  msg: string;
+}
 
 @Component({
   selector: 'identificacao',
@@ -14,14 +23,33 @@ export class IdentificacaoComponent {
   @Input() public valorPad = '';
   public animationState = 'out';
   public previousRoute: string[];
+  public crmForm: FormGroup;
+  public crmInfo: CRM;
+  public crmStatus: Status;
 
-  constructor(private _state: RoutingState) {
+  constructor(private userIdle: UserIdleService, private _state: RoutingState, private _validate: ValidateBrService,private fb: FormBuilder, private _router: Router) {
     this.previousRoute = this._state.getHistory();
-    Global.FLUXO = new Fluxo(new CRM(), '', '', null, null, null);
+    Global.FLUXO = new Fluxo(new CRM(), '', '', '', '', null, null, null);
+    this.userIdle.stopWatching();
     console.log('Fluxo de entrada', Global.FLUXO);
+    this.loadForm();
+  }
+
+  loadForm() {
+    this.crmInfo = new CRM();
+    this.crmForm = this.fb.group({
+      cpf: ['', [Validators.min(11),this._validate.cpf]]
+    });
+  }
+
+  updateForm() {
+    this.crmForm.setValue({
+      cpf: this.valorPad
+    });
   }
 
   toggleShowDiv(divName: string) {
+    this.updateForm();
     if (divName === 'divA') {
       this.animationState = this.animationState === 'out' ? 'in' : 'out';
     }
@@ -33,17 +61,29 @@ export class IdentificacaoComponent {
     .replace(/(\d{3})(\d)/, '$1.$2')
     .replace(/(\d{3})(\d{1,2})/, '$1-$2')
     .replace(/(-\d{2})\d+?$/, '$1');
-    
-    if(valor.crm) {
-      Global.FLUXO.crm.nome_cliente = valor.crm.nome_cliente;
-      Global.FLUXO.crm.cpf = valor.crm.documento;
-      Global.FLUXO.segmento = valor.crm.segmento;
-      Global.FLUXO.situacao = valor.crm.situacao;
-      Global.FLUXO.consignado = valor.crm.consignado;
-      Global.FLUXO.isCorrentista = valor.crm.correntista;
+
+    if(this.crmForm.value.cpf && valor.crm !== undefined) {
+      Global.FLUXO.crm.cpf = this.crmForm.value.cpf.replace(/\D/g, '');
+      if(valor.crm.status === false) {
+        this._router.navigate(['/modalidade', 5]);
+        Global.FLUXO.crmEncontrado = valor.crm.status;
+      } else {
+        Global.FLUXO.crm.nome_cliente = valor.crm.nome;
+        Global.FLUXO.segmento = valor.crm.segmento;
+        Global.FLUXO.situacao = valor.crm.situacao;
+        Global.FLUXO.consignado = valor.crm.consignado;
+        Global.FLUXO.correntista = valor.crm.correntista;
+        Global.FLUXO.crmEncontrado = valor.crm.status;
+        if (Global.FLUXO.crmEncontrado && Global.FLUXO.situacao === 'Irregular') {
+          this._router.navigate(['/modalidade', 5]);
+        } else {
+          this._router.navigate(['/segmento']);
+        }
+      }
     }
-    
+
     this.animationState = valor.animation;
+    this.updateForm();
   }
 
   onKey(ev: any) {

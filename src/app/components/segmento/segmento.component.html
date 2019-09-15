@@ -1,14 +1,33 @@
 <div class="card card-block w-100 mx-auto">
   <div class="row">
     <div class="col-sm-12 col-title col-segmento">
-      <p class="segmento-title">escolha uma<br>das opções</p>
+      <p class="segmento-title">escolha uma <br>das opções</p>
     </div>
     <div class="col-sm-12 col-conteudo conteudo-segmento">
       <div class="row justify-content-center">
+        <div class="align-self-center btn-segmento" *ngFor="let links of listLink;let i = index"
+        (click)="navigate(links.idEmissorPaginasDestino, links.descr)">
+          <div class="col-11 inset-data inset-segmento">
+            <div class="col-sm-12 icone">
+              <img class="{{ links.descr.split(' ')[0] }}" src="./assets/icons/{{ links.descr.split(' ')[0] }}.png">
+            </div>
+            <div *ngFor="let text of links.interfaceEmissorTituloLink;let i = index">
+              <div class="col-sm-12 texto" *ngIf="i === 0;">
+                <p class="cat-texto cat-{{ links.descr.split(' ')[0] }}">{{ text.textoLink }}</p>
+              </div>
+
+              <div class="col-sm-12 subtexto" *ngIf="i > 0">
+                <p class="cat-subtexto sub-{{ links.descr.split(' ')[0] }}">{{ text.textoLink }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 inset-borda inset-borda-segmento"></div>
+        </div>
+        <!--
         <div class="align-self-center btn-segmento" (click)="selectSegmento('abertura')">
           <div class="col-11 inset-data inset-segmento">
             <div class="col-sm-12 icone">
-              <img class="abertura" src="./assets/icons/abrirConta.png">
+              <img class="abertura" src="./assets/icons/abertura.png">
             </div>
             <div class="col-sm-12 texto">
               <p class="cat-texto cat-abertura">abrir uma conta</p>
@@ -18,8 +37,10 @@
             </div>
           </div>
           <div class="col-1 inset-borda inset-borda-segmento"></div>
-        </div>
+        </div>-->
       </div>
+
+      <!--
       <div class="row justify-content-center">
         <div class="align-self-center btn-segmento" (click)="selectSegmento('consignado')">
           <div class="col-11 inset-data inset-segmento">
@@ -40,7 +61,7 @@
         <div class="align-self-center btn-segmento" (click)="selectSegmento('informacoes')">
           <div class="col-11 inset-data inset-segmento">
             <div class="col-sm-12 icone">
-              <img class="duvidas" src="./assets/icons/duvidas.png">
+              <img class="duvidas" src="./assets/icons/informacoes.png">
             </div>
             <div class="col-sm-12 texto">
               <p class="cat-texto cat-informacoes">informações</p>
@@ -51,7 +72,7 @@
           </div>
           <div class="col-1 inset-borda inset-borda-segmento"></div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>

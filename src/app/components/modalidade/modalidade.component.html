@@ -1,10 +1,29 @@
 <div class="card card-block w-100 mx-auto">
   <div class="row">
     <div class="col-sm-12 col-title col-modalidade">
-      <p class="modalidade-title">escolha uma<br>das opções</p>
+      <p class="modalidade-title">escolha uma <br>das opções</p>
     </div>
     <div class="col-sm-12 col-conteudo conteudo-modalidade">
       <div class="row justify-content-center">
+        <div class="align-self-center btn-modalidade btn-{{ btn.textoBotao }}" *ngFor="let btn of listButtons"
+        (click)="emitSenha(btn.idBotao, btn.tipoBotao, btn.iconePrioritario)">
+          <div class="col-11 inset-data inset-modalidade">
+            <div class="col-sm-12 icone">
+              <img
+              src="./assets/icons/{{ btn.textoBotao.indexOf('80') !== -1 ? 'idoso80' : btn.textoBotao }}.png"
+              class="{{ btn.textoBotao.indexOf('80') !== -1 ? 'idoso80' : btn.textoBotao }}"
+              >
+            </div>
+            <div class="col-sm-12 texto">
+              <p class="cat-texto cat-{{ btn.textoBotao.indexOf('80') !== -1 ? 'idoso80' : btn.textoBotao }}">{{ btn.textoBotao }}</p>
+            </div>
+            <div class="col-sm-12 subtexto">
+              <p class="cat-subtexto sub-{{ btn.textoBotao.indexOf('80') !== -1 ? 'idoso80' : btn.textoBotao }}">&nbsp;</p>
+            </div>
+          </div>
+          <div class="col-1 inset-borda inset-borda-modalidade inset-borda-{{ btn.textoBotao }}"></div>
+        </div>
+        <!--
         <div class="align-self-center btn-modalidade" (click)="selectModalidade('80+')">
           <div class="col-11 inset-data inset-modalidade">
             <div class="col-sm-12 icone">
@@ -18,8 +37,9 @@
             </div>
           </div>
           <div class="col-1 inset-borda inset-borda-modalidade"></div>
-        </div>
+        </div>-->
       </div>
+      <!--
       <div class="row justify-content-center">
         <div class="align-self-center btn-modalidade" (click)="selectModalidade('prioritario')">
           <div class="col-11 inset-data inset-modalidade">
@@ -51,7 +71,7 @@
           </div>
           <div class="col-1 inset-borda inset-borda-modalidade inset-borda-geral"></div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>

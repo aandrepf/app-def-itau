@@ -1,28 +1,53 @@
+<ngx-spinner bdOpacity = 0.9 bdColor = "#efe9e5" size = "large" color = "#f36d00" type = "ball-clip-rotate-pulse" fullScreen = "true">
+  <p style="color: #f36d00" class="spinner-text">Aguarde a impressão <br>e retire seu comprovante abaixo</p>
+</ngx-spinner>
 <div class="card card-block w-100 mx-auto">
     <div class="row">
         <div class="col-sm-12 col-title-senha">
-        <p class="senha-title">retire<br>sua senha</p>
+        <p class="senha-title">retire <br>sua senha</p>
         </div>
         <div class="col-sm-12 col-conteudo-senha">
-            <div class="row justify-content-center row-senha">
-                <div class="align-self-center btn-senha">
-                    <div class="col-12 inset-senha">
-                        <div class="col-sm-12 texto">
-                            <p class="senha-segmento-texto">abertura de conta</p>
-                        </div>
-                        <div class="col-sm-12 texto">
-                            <p class="senha-modalidade-texto">prioritário</p>
-                        </div>
-                        <div class="col-sm-12 texto">
-                            <p class="senha-range-texto">D230</p>
-                        </div>
+            <div class="row justify-content-center row-senha {{ prioritario ? 'row-prioritario' : '' }}">
+              <!-- INFORMAÇÕES DA SENHA -->
+              <div class="align-self-center btn-senha" *ngIf="senha">
+                  <div class="col-12 inset-senha">
+                      <div class="col-sm-12 texto">
+                          <p class="senha-segmento-texto">{{ opcao }}</p>
+                      </div>
+                      <div class="col-sm-12 texto">
+                          <p class="senha-modalidade-texto" *ngIf="prioritario;else noprioritario">prioritário</p>
+                          <ng-template #noprioritario>
+                              <p class="senha-modalidade-texto no-text">&nbsp;</p>
+                          </ng-template>
+                      </div>
+                      <div class="col-sm-12 texto">
+                          <p class="senha-range-texto">{{ valorSenha }}</p>
+                      </div>
+                  </div>
+                  <div class="col-12 inset-setas">
+                      <div class="col-sm-12 texto">
+                          <img class="setas" src="./assets/icons/setas.png" alt="">
+                      </div>
+                  </div>
+              </div>
+
+              <!-- MENSAGEM DE ERRO NA IMPRESSÃO -->
+              <div class="align-self-center btn-senha" *ngIf="error">
+                <div class="col-12 inset-senha">
+                    <div class="col-sm-12 texto">
+                      <p class="senha-segmento-texto msg-erro">Não foi possível imprimir sua senha!</p>
                     </div>
-                    <div class="col-12 inset-setas">
-                        <div class="col-sm-12 texto">
-                            <img class="setas" src="./assets/icons/setas.png" alt="">
-                        </div>
+                    <div class="col-sm-12 texto">
+                      <p class="senha-modalidade-texto msg-erro">Procure por um de nossos atendentes.</p>
+                    </div>
+                    <div class="col-sm-12 texto">
+                      <p class="senha-range-texto"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
                     </div>
                 </div>
+                <div class="col-12 inset-setas">
+                    <div class="col-sm-12 texto">&nbsp;</div>
+                </div>
+              </div>
             </div>
         </div>
     </div>

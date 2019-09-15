@@ -5,10 +5,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { NgxMaskModule, MaskService } from 'ngx-mask';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { IdentificacaoComponent } from './identificacao.component';
 import { NumPadComponent } from './numpad/numpad';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   imports: [
