@@ -1,6 +1,6 @@
 {
   "name": "app-def-itau",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "Aplicação para DEMANDA FOLHA do Itaú",
   "repository": {
     "type": "git",
@@ -27,9 +27,9 @@
     "ng:serve:web": "npm run postinstall:web && ng serve -o",
     "electron:serve-tsc": "tsc -p tsconfig-serve.json",
     "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
-    "electron:local": "npm run build:prod && electron . --endpoint=localhost",
+    "electron:local": "npm run build:prod && electron . --endpoint=localhost --debug",
     "electron:linux": "npm run build:prod && electron-builder build --linux",
-    "electron:windows": "npm run build:prod && electron-builder build --windows --ia32",
+    "electron:windows": "npm run build:prod && electron-builder build --windows --x64",
     "electron:mac": "npm run build:prod && electron-builder build --mac"
   },
   "dependencies": {

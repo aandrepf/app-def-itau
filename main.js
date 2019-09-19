@@ -27,6 +27,8 @@ function createWindow() {
           fullscreen: true,
           frame: false
         */
+        // fullscreen: true
+        resizable: false,
         kiosk: true
     });
     // Previne o display de entrar em modo sleep

@@ -32,6 +32,7 @@ export class NumPadComponent implements OnInit {
 
   ngOnInit() { localStorage.clear(); }
   ngOnChanges(): void {
+    console.log('validado?', this.validado, 'valor', this.values.length);
     this.disabled = !this.validado && this.values.length === 11 ? false : true;
   }
 
@@ -60,13 +61,18 @@ export class NumPadComponent implements OnInit {
       padValues.values = dado;
       padValues.animation = 'out';
       this._interface.getUserInfo({ cpf: padValues.values } ).subscribe(
-        (retorno: any) => {
-          this.cadastro = retorno;
-          padValues.crm = this.cadastro;
+        (crm: any) => {
+          if (Global.SLAVE) {
+            this.cadastro = crm.retorno;
+            padValues.crm = this.cadastro;
+          } else {
+            this.cadastro = crm;
+            padValues.crm = this.cadastro;
+          }
+
         },
         (error) => void(error),
         () => {
-
           if(padValues.crm.status) {
             this._spinner.hide();
             this.numValue.emit(padValues);

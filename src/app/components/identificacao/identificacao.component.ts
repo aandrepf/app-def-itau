@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, HostListener } from '@angular/core';
 import { ValidateBrService } from 'angular-validate-br';
 import { SlideInOutAnimation } from './animation';
 import { Pad } from './numpad/numpad';
@@ -19,7 +19,7 @@ class Status {
   templateUrl: './identificacao.component.html',
   animations: [SlideInOutAnimation]
 })
-export class IdentificacaoComponent {
+export class IdentificacaoComponent{
   @Input() public valorPad = '';
   public animationState = 'out';
   public previousRoute: string[];
@@ -27,13 +27,21 @@ export class IdentificacaoComponent {
   public crmInfo: CRM;
   public crmStatus: Status;
 
-  constructor(private userIdle: UserIdleService, private _state: RoutingState, private _validate: ValidateBrService,private fb: FormBuilder, private _router: Router) {
+  constructor(private userIdle: UserIdleService, private _state: RoutingState, private _validate: ValidateBrService,private fb: FormBuilder, private _router: Router, private renderer: Renderer2) {
     this.previousRoute = this._state.getHistory();
     Global.FLUXO = new Fluxo(new CRM(), '', '', '', '', null, null, null);
     this.userIdle.stopWatching();
     console.log('Fluxo de entrada', Global.FLUXO);
     this.loadForm();
   }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+   event.returnValue = false;
+   event.preventDefault();
+  }
+
+  @ViewChild("cpfInput") cpfInput: ElementRef;
 
   loadForm() {
     this.crmInfo = new CRM();
@@ -50,6 +58,7 @@ export class IdentificacaoComponent {
 
   toggleShowDiv(divName: string) {
     this.updateForm();
+    this.animationState = 'out';
     if (divName === 'divA') {
       this.animationState = this.animationState === 'out' ? 'in' : 'out';
     }
@@ -66,6 +75,7 @@ export class IdentificacaoComponent {
       Global.FLUXO.crm.cpf = this.crmForm.value.cpf.replace(/\D/g, '');
       if(valor.crm.status === false) {
         this._router.navigate(['/modalidade', 5]);
+        Global.FLUXO.opcao = 'informações';
         Global.FLUXO.crmEncontrado = valor.crm.status;
       } else {
         Global.FLUXO.crm.nome_cliente = valor.crm.nome;
@@ -75,6 +85,7 @@ export class IdentificacaoComponent {
         Global.FLUXO.correntista = valor.crm.correntista;
         Global.FLUXO.crmEncontrado = valor.crm.status;
         if (Global.FLUXO.crmEncontrado && Global.FLUXO.situacao === 'Irregular') {
+          Global.FLUXO.opcao = 'informações';
           this._router.navigate(['/modalidade', 5]);
         } else {
           this._router.navigate(['/segmento']);

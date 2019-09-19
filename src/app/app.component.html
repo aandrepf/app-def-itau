@@ -1,4 +1,7 @@
-<div class="row">
+<ngx-spinner bdOpacity = 0.9 bdColor = "#efe9e5" size = "large" color = "#f36d00" type = "ball-clip-rotate-pulse" fullScreen = "true">
+  <p style="color: #f36d00" class="spinner-text">{{ msg }}</p>
+</ngx-spinner>
+<div class="row" *ngIf="showInterface">
   <div class="col-sm-12 col-navigate">
     <p class="btn-back" *ngIf="showNavigation;else noNavigation"
     (click)="previousPage()"><span class="back-icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span><span class="back-text">voltar</span></p>
@@ -7,9 +10,10 @@
     </ng-template>
   </div>
 </div>
-<div class="row h-93 align-items-center">
+<div class="row h-93 align-items-center" *ngIf="showInterface">
   <div class="col-sm-12 container-wrapper">
     <router-outlet></router-outlet>
   </div>
 </div>
+
 

@@ -17,6 +17,7 @@ import { ModalidadeModule } from './components/modalidade/modalidade.module';
 import { SegmentoModule } from './components/segmento/segmento.module';
 import { PrintModule } from './components/print/print.module';
 import { NgxElectronModule } from 'ngx-electron';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { AngularValidateBrLibModule } from 'angular-validate-br';
 import { UserIdleModule } from 'angular-user-idle';
 
@@ -38,6 +39,7 @@ import { InterfaceService } from './services/interface.service';
     SegmentoModule,
     PrintModule,
     NgxElectronModule,
+    NgxSpinnerModule,
     AngularValidateBrLibModule,
     // idle: 10 segundos, timeout: 15 segundos, ping: 120 segundos
     UserIdleModule.forRoot({idle: 15, timeout: 15, ping: 120})

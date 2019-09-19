@@ -35,7 +35,7 @@ export class RoutingState {
       this.current = event.url.replace(/(\/)(\w+)?(\/\w+)?/g, '$1$2');
       this._userIdle.stopWatching();
       this._userIdle.stopTimer();
-      if(this.current !== '/' && this.current !== '/identificacao' && this.current !== '/print') {
+      if(this.current !== '/' && this.current !== '/identificacao' && this.current !== '/print' && this.current !== '/C:/Users~1/AppData/Temp.tmp/app/app.asar/compiled') {
         this._userIdle.startWatching();
         this._userIdle.onTimerStart().subscribe(count => count == null ? void(0) : console.log('contando ', count));
         this._userIdle.onTimeout().subscribe(() => {

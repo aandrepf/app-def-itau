@@ -9,6 +9,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { IdentificacaoComponent } from './identificacao.component';
 import { NumPadComponent } from './numpad/numpad';
+import { FocusDirective } from './auto-focus.directive';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { NumPadComponent } from './numpad/numpad';
   ],
   declarations: [
     IdentificacaoComponent,
+    FocusDirective,
     NumPadComponent
   ],
   exports: [IdentificacaoComponent],

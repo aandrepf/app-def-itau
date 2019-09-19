@@ -9,11 +9,11 @@
     <div class="col-sm-12 col-conteudo conteudo-identificacao">
       <form class="example-form" [formGroup]="crmForm">
         <input
+        appFocus
         type="text" maxlength="14" placeholder="cpf" class="form-control identificacao-input"
         formControlName="cpf"
-        (keydown)="onKey($event)"
         (focus)="toggleShowDiv('divA')">
-        <small class="invalid-cpf" *ngIf="!crmForm.get('cpf').valid && crmForm.get('cpf').touched">O CPF INFORMADO É INVÁLIDO!</small>
+        <small class="invalid-cpf" *ngIf="!crmForm.get('cpf').valid && crmForm.get('cpf').touched && crmForm.get('cpf').value.length === 14">O CPF INFORMADO É INVÁLIDO!</small>
       </form>
       <div class="col-sm-12 numpad divA" [@slideInOut]="animationState">
         <numpad (numValue)="recebeValue($event)" [validado]="!crmForm.get('cpf').valid && crmForm.get('cpf').touched"></numpad>

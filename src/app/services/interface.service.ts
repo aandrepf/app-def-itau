@@ -42,7 +42,7 @@ export class InterfaceService {
       return this.http.post(url, httpOptions).toPromise()
       .then((ret: any) => {
         Global.SLAVE = ret.slave;
-        console.log('é slave?', this.slave);
+        console.log('é slave?', Global.SLAVE);
       }).catch((error) => {
         void(error);
         Global.SLAVE = false;
@@ -50,10 +50,26 @@ export class InterfaceService {
       });
     }
 
+    public getAgencia() {
+      const url = `${this.protocol}://${this.endpoint}:8080/agencia/getAgencia`;
+      return this.http.post(url, httpOptions).toPromise()
+      .then((ret: any) => {
+        return ret.idAgencia;
+      })
+      .catch((error) => { void(error); });
+    }
+
     public getUserInfo(cpf: Object): Observable<any> {
-      const url = `${this.protocol}://${this.endpoint}:8080/utils/identificaCliente`;
-      const body = JSON.stringify(cpf);
-      return this.http.post(url, body, httpOptions);
+
+      if(Global.SLAVE) {
+        const url = `${this.protocol}://${this.endpoint}:8080/call/identificaCliente`;
+        const body = JSON.stringify(cpf);
+        return this.http.post(url, body, httpOptions);
+      } else {
+        const url = `${this.protocol}://${this.endpoint}:8080/utils/identificaCliente`;
+        const body = JSON.stringify(cpf);
+        return this.http.post(url, body, httpOptions);
+      }
     }
 
     public getInterface(id: number): Promise<any> {
@@ -67,15 +83,15 @@ export class InterfaceService {
       });
     }
 
-    public sendMsg(item: Object) {
-      if(this.slave) {
-        const url = `${this.protocol}://${this.endpoint}:8080/call/sendMsg`;
-        const body = JSON.stringify(item);
-        return this.http.post(url,body, httpOptions);
-      } else {
+    public sendMsg(item: any) {
+      if(item.imprimirTicket) {
         const url = `${this.protocol}://${this.endpoint}:8080/atendimento/novaSenha`;
         const body = JSON.stringify(item);
         return this.http.post(url, body, httpOptions);
+      } else {
+        const url = `${this.protocol}://${this.endpoint}:8080/call/sendMsg`;
+        const body = JSON.stringify(item);
+        return this.http.post(url,body, httpOptions);
       }
     }
 }
