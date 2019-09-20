@@ -27,9 +27,9 @@
     "ng:serve:web": "npm run postinstall:web && ng serve -o",
     "electron:serve-tsc": "tsc -p tsconfig-serve.json",
     "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
-    "electron:local": "npm run build:prod && electron . --endpoint=localhost --debug",
+    "electron:local": "npm run build:prod && electron . --endpoint=localhost",
     "electron:linux": "npm run build:prod && electron-builder build --linux",
-    "electron:windows": "npm run build:prod && electron-builder build --windows --x64",
+    "electron:windows": "npm run build:prod && electron-builder build --windows --ia32",
     "electron:mac": "npm run build:prod && electron-builder build --mac"
   },
   "dependencies": {
@@ -50,6 +50,8 @@
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "electron-args": "^0.1.0",
+    "electron-log": "^3.0.8",
+    "electron-timber": "^0.5.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "ngx-electron": "^2.1.1",

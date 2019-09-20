@@ -35,7 +35,6 @@ app.on('activate', () => {
 
 function createWindow() {
   win = new BrowserWindow({
-    // width: 1366, height: 768,
     /*
       fullscreen: true,
       frame: false
@@ -47,6 +46,9 @@ function createWindow() {
 
   // Previne o display de entrar em modo sleep
   powerSaveBlocker.start('prevent-display-sleep');
+
+  // Previne zoom na tela
+  app.commandLine.appendSwitch('disable-pinch');
 
   win.setAutoHideMenuBar(true);
 

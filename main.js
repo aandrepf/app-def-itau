@@ -4,6 +4,9 @@ var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
 var args = require('electron-args');
+var log = require('electron-log');
+var logger = require('electron-timber');
+var remote = require('electron').remote;
 // tslint:disable-next-line:prefer-const
 var win;
 var cli = args("\n    app\n    Usage\n    $ app --arg\n    $ app --arg=value\n    Options\n    --debug     modo debug [Default: false]\n    --ssl       protocolo de seguran\u00E7a [Default: false]\n    --endpoint  ip ou hostname do totem\n    ", {
@@ -12,6 +15,9 @@ var cli = args("\n    app\n    Usage\n    $ app --arg\n    $ app --arg=value\n  
         ssl: false
     }
 });
+log.transports.file.level = 'info';
+log.transports.file.file = __dirname + '.log';
+log.info(electron_1.netLog);
 console.log('MODO DEBUG ATIVADO?', cli.flags.debug);
 console.log('IP/HOSTNAME DO TOTEM:', cli.flags.endpoint);
 electron_1.app.on('ready', createWindow);
@@ -33,6 +39,8 @@ function createWindow() {
     });
     // Previne o display de entrar em modo sleep
     electron_1.powerSaveBlocker.start('prevent-display-sleep');
+    // Previne zoom na tela
+    electron_1.app.commandLine.appendSwitch('disable-pinch');
     win.setAutoHideMenuBar(true);
     // carrega a aplicação baseada no local onde esta o app minificado
     win.loadURL(url.format({
